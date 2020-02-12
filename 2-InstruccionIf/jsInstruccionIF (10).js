@@ -13,4 +13,15 @@ function mostrar()
 		alert(num + " Vamos, la próxima se puede");
 	}
 
-}//FIN DE LA FUNCIÓN
+	
+}
+
+/* tambien puede hacerse de esta forma:
+var mensaje = "Aprobo. Nota: ";
+if(num>=4) {
+	if(nota>=9){
+		mensaje = "Excelente. " + mensaje;
+	}
+	alert(mensaje + num)
+}
+*/
