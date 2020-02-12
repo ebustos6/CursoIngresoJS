@@ -8,6 +8,6 @@ function mostrar()
     num1 = document.getElementById("elNombre").value;
     num2 = document.getElementById("laEdad").value;
 
-    alert(" " + num1 + " Y su edad es " + num2 + ".")
+    alert("Usted es " + num1 + " Y su edad es " + num2 + ".")
 }
 
