@@ -1,9 +1,12 @@
 function mostrar() {
 
-	var seguir;
+	var contador_pares = 0;
 	var numero;
-	var maximo;
-	var minimo;
+	var contador_positivo = 0;
+	var positivo = 0;
+	var contador_negativo = 0;
+	var negativo = 0;
+	var contador_ceros = 0;
 	var respuesta;
 
 	do {
@@ -14,9 +17,26 @@ function mostrar() {
 			numero = parseInt(prompt("Eso no es un número. Ingrese un número: "));
 		}
 
+		if (numero > 0) {
+			positivo = positivo + numero;
+			contador_positivo++;
+		}
+		else if(numero < 0){
+			negativo = negativo + numero;
+			contador_negativo++;
+		}
+		else {
+			contador_ceros++;
+		}
+
+		if(numero % 2 == 1){
+			contador_pares++;
+		}
 		respuesta = prompt("Quiere ingresar otro número?");
 
 	} while (respuesta == "s");
+
+	document.write("<h1>Resultados</h1>" + "<p>La suma de números positivos es: " + positivo + "<br> La cantidad de números positivos es: " + contador_positivo + "<br> La suma de números negativos es: " + negativo + "<br> La cantidad de números negativos es: " + contador_negativo + "<br> La cantidad de ceros es: " + contador_ceros + "<br> La cantidad de números pares es: " + contador_pares + "<br> El promedio de números positivos es: " + (positivo / contador_positivo) + "<br> El promedio de números negativos es: " + (negativo / contador_negativo) + "<br> La diferencia entre positivos y negativos es: " + (positivo + negativo) + "</p>")
 /*	1-Suma de los negativos.| if, elseif
 	2-Suma de los positivos.|
 	3-Cantidad de positivos. |
